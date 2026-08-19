@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>1822 Kitchen & Bar | Coming Soon</title>
+<meta name="description" content="1822 Kitchen & Bar is coming soon to Memorial at Kirkwood, Houston, Texas. Part of the Red River Restaurant Group.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #0D1B3D;
+    --navy-deep: #081026;
+    --parchment: #F3EFE6;
+    --copper: #D98248;
+    --copper-highlight: #E0A868;
+    --copper-shadow: #7A3A1E;
+  }
+
+  * { box-sizing: border-box; }
+
+  html, body {
+    margin: 0;
+    padding: 0;
+    background: var(--navy);
+    color: var(--parchment);
+    font-family: 'Poppins', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    min-height: 100svh;
+    display: flex;
+    flex-direction: column;
+    background:
+      radial-gradient(ellipse 120% 80% at 50% -10%, rgba(217,130,72,0.14), transparent 60%),
+      radial-gradient(ellipse 90% 60% at 50% 110%, rgba(217,130,72,0.10), transparent 60%),
+      var(--navy-deep);
+    overflow-x: hidden;
+  }
+
+  .stars {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    opacity: 0.05;
+    background-image:
+      radial-gradient(circle, var(--copper) 1px, transparent 1.5px);
+    background-size: 42px 42px;
+    z-index: 0;
+  }
+
+  main {
+    position: relative;
+    z-index: 1;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 8vh 6vw 6vh;
+    max-width: 720px;
+    margin: 0 auto;
+  }
+
+  .logo {
+    width: min(260px, 60vw);
+    height: auto;
+    margin-bottom: clamp(28px, 5vh, 48px);
+    animation: rise 1s ease-out both;
+  }
+  .eyebrow {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 12px;
+    letter-spacing: 0.32em;
+    text-transform: uppercase;
+    color: var(--copper-highlight);
+    margin: 0 0 18px;
+    animation: rise 1s ease-out 0.1s both;
+  }
+
+  h1 {
+    font-family: 'DM Serif Display', serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: clamp(2.1rem, 5.2vw, 3.4rem);
+    line-height: 1.15;
+    margin: 0 0 22px;
+    color: var(--parchment);
+    animation: rise 1s ease-out 0.18s both;
+  }
+
+  h1 em {
+    font-style: italic;
+    color: var(--copper-highlight);
+  }
+
+  .sub {
+    font-size: 16px;
+    line-height: 1.7;
+    color: rgba(243,239,230,0.72);
+    max-width: 480px;
+    margin: 0 0 40px;
+    animation: rise 1s ease-out 0.26s both;
+  }
+
+  .divider {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 34px;
+    animation: rise 1s ease-out 0.32s both;
+  }
+
+  .divider .line {
+    width: 56px;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--copper), transparent);
+  }
+
+  .divider .diamond {
+    width: 7px;
+    height: 7px;
+    background: var(--copper);
+    transform: rotate(45deg);
+  }
+  .address-card {
+    border: 1px solid rgba(217,130,72,0.35);
+    background: rgba(217,130,72,0.06);
+    border-radius: 4px;
+    padding: 28px 36px;
+    margin-bottom: 40px;
+    animation: rise 1s ease-out 0.4s both;
+  }
+
+  .address-label {
+    font-size: 11px;
+    letter-spacing: 0.24em;
+    text-transform: uppercase;
+    color: var(--copper-highlight);
+    margin-bottom: 10px;
+  }
+
+  .address-lines {
+    font-family: 'DM Serif Display', serif;
+    font-size: clamp(1.15rem, 2.6vw, 1.5rem);
+    line-height: 1.5;
+    color: var(--parchment);
+  }
+
+  .address-lines .locale {
+    display: block;
+    font-family: 'Poppins', sans-serif;
+    font-size: 13px;
+    font-weight: 400;
+    letter-spacing: 0.04em;
+    color: rgba(243,239,230,0.6);
+    margin-top: 8px;
+  }
+
+  footer {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    padding: 26px 6vw 34px;
+    font-size: 12px;
+    letter-spacing: 0.06em;
+    color: rgba(243,239,230,0.45);
+    animation: rise 1s ease-out 0.5s both;
+  }
+
+  footer a {
+    color: var(--copper-highlight);
+    text-decoration: none;
+    border-bottom: 1px solid rgba(224,168,104,0.4);
+    transition: border-color 0.2s ease, color 0.2s ease;
+  }
+
+  footer a:hover,
+  footer a:focus-visible {
+    color: var(--parchment);
+    border-color: var(--parchment);
+  }
+
+  a:focus-visible {
+    outline: 2px solid var(--copper-highlight);
+    outline-offset: 3px;
+  }
+
+  @keyframes rise {
+    from { opacity: 0; transform: translateY(14px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .logo, .eyebrow, h1, .sub, .divider, .address-card, footer {
+      animation: none;
+    }
+  }
+</style>
+</head>
+<body>
+  <div class="stars" aria-hidden="true"></div>
+
+  <main>
+    <img class="logo" src="1822-logo.png" alt="1822 Kitchen & Bar">
+
+    <p class="eyebrow">Coming Soon</p>
+
+    <h1>A new table is<br><em>being set</em> in Houston.</h1>
+
+    <p class="sub">
+      1822 Kitchen &amp; Bar is on its way to Memorial at Kirkwood.
+      Follow along with Red River Restaurants for updates on our opening.
+    </p>
+
+    <div class="divider" aria-hidden="true">
+      <span class="line"></span>
+      <span class="diamond"></span>
+      <span class="line"></span>
+    </div>
+
+    <div class="address-card">
+      <div class="address-label">Find Us At</div>
+      <div class="address-lines">
+        14008 Memorial Dr, Suite F
+        <span class="locale">Houston, TX 77079 &middot; Memorial at Kirkwood</span>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    Part of the <a href="https://redriverrestaurants.com/" target="_blank" rel="noopener">Red River Restaurant Group</a>
+  </footer>
+</body>
+</html>
