@@ -86,7 +86,13 @@ a { color: inherit; }
   text-transform: uppercase;
 }
 .coordinates { color: var(--ink-muted); }
-.opening { display: flex; align-items: center; gap: 9px; }
+.opening {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  margin-right: 64px;
+  white-space: nowrap;
+}
 .opening span { width: 7px; height: 7px; border-radius: 50%; background: var(--copper); box-shadow: 0 0 0 5px rgba(188,94,47,.12); }
 
 .hero {
@@ -271,7 +277,7 @@ h1 strong {
 
 @media (max-width: 520px) {
   .masthead { align-items: start; }
-  .opening { font-size: .52rem; }
+  .opening { margin-right: 24px; font-size: .52rem; }
   .hero { padding-top: 16px; }
   .edition { letter-spacing: .13em; }
   h1 span { font-size: 15vw; }
