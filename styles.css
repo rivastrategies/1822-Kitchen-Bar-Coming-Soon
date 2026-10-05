@@ -1,11 +1,11 @@
 :root {
-  --navy: #0b1a36;
-  --navy-soft: #142543;
-  --copper: #bc5e2f;
-  --copper-hot: #e27d43;
-  --paper: #eee6d8;
-  --paper-light: #f7f1e7;
-  --ink-muted: rgba(11, 26, 54, .58);
+  --navy: #0d1b3d;
+  --navy-soft: #16264a;
+  --copper: #b35a2e;
+  --copper-hot: #d9824b;
+  --paper: #f3efe6;
+  --paper-light: #fffcf7;
+  --ink-muted: rgba(13, 27, 61, .58);
   --serif: "Libre Baskerville", Georgia, serif;
   --sans: "Manrope", Arial, sans-serif;
 }
@@ -69,15 +69,19 @@ a { color: inherit; }
   padding: 20px 38px 0;
 }
 .brand {
-  display: inline-flex;
-  width: max-content;
-  align-items: baseline;
-  gap: 12px;
-  color: var(--navy);
+  display: block;
+  width: 112px;
+  height: 82px;
+  margin-top: -12px;
+  overflow: hidden;
   text-decoration: none;
 }
-.brand-number { font: 700 1.65rem/.85 var(--serif); letter-spacing: -.08em; }
-.brand-name { padding-left: 12px; border-left: 1px solid rgba(11,26,54,.34); font: 600 .52rem/1.25 var(--sans); letter-spacing: .19em; text-transform: uppercase; }
+.brand picture { display: block; }
+.brand img {
+  width: 350px;
+  max-width: none;
+  height: auto;
+}
 .coordinates, .opening {
   margin: 0;
   font: 600 .58rem/1.6 var(--sans);
@@ -239,9 +243,8 @@ h1 strong {
   .stage { min-height: calc(100svh - 16px); clip-path: polygon(0 0, calc(100% - 38px) 0, 100% 38px, 100% 100%, 38px 100%, 0 calc(100% - 38px)); }
   .stage::before { background: linear-gradient(var(--copper), var(--copper)) 0 0 / calc(100% - 38px) 1px no-repeat, linear-gradient(45deg, transparent 48.4%, var(--copper) 49%, var(--copper) 51%, transparent 51.6%) 100% 0 / 38px 38px no-repeat, linear-gradient(var(--copper), var(--copper)) 100% 38px / 1px calc(100% - 38px) no-repeat, linear-gradient(var(--copper), var(--copper)) 38px 100% / calc(100% - 38px) 1px no-repeat, linear-gradient(45deg, transparent 48.4%, var(--copper) 49%, var(--copper) 51%, transparent 51.6%) 0 100% / 38px 38px no-repeat, linear-gradient(var(--copper), var(--copper)) 0 0 / 1px calc(100% - 38px) no-repeat; }
   .masthead { grid-template-columns: 1fr auto; padding: 12px 20px 0; }
-  .brand { gap: 9px; }
-  .brand-number { font-size: 1.35rem; }
-  .brand-name { padding-left: 9px; font-size: .46rem; }
+  .brand { width: 116px; height: 59px; margin-top: -5px; }
+  .brand img { width: 154px; }
   .coordinates { display: none; }
   .hero { grid-template-columns: 1fr; gap: 32px; padding: 24px 20px 34px; }
   .hero-copy { padding-top: 0; }
