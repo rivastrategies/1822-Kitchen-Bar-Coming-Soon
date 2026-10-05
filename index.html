@@ -1,240 +1,131 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>1822 Kitchen & Bar | Coming Soon</title>
-<meta name="description" content="1822 Kitchen & Bar is coming soon to Memorial at Kirkwood, Houston, Texas. Part of the Red River Restaurant Group.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
-<style>
-  :root {
-    --navy: #0D1B3D;
-    --navy-deep: #081026;
-    --parchment: #F3EFE6;
-    --copper: #D98248;
-    --copper-highlight: #E0A868;
-    --copper-shadow: #7A3A1E;
-  }
-
-  * { box-sizing: border-box; }
-
-  html, body {
-    margin: 0;
-    padding: 0;
-    background: var(--navy);
-    color: var(--parchment);
-    font-family: 'Poppins', sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-  }
-
-  body {
-    min-height: 100svh;
-    display: flex;
-    flex-direction: column;
-    background:
-      radial-gradient(ellipse 120% 80% at 50% -10%, rgba(217,130,72,0.14), transparent 60%),
-      radial-gradient(ellipse 90% 60% at 50% 110%, rgba(217,130,72,0.10), transparent 60%),
-      var(--navy-deep);
-    overflow-x: hidden;
-  }
-
-  .stars {
-    position: fixed;
-    inset: 0;
-    pointer-events: none;
-    opacity: 0.05;
-    background-image:
-      radial-gradient(circle, var(--copper) 1px, transparent 1.5px);
-    background-size: 42px 42px;
-    z-index: 0;
-  }
-
-  main {
-    position: relative;
-    z-index: 1;
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    padding: 8vh 6vw 6vh;
-    max-width: 720px;
-    margin: 0 auto;
-  }
-
-  .logo {
-    width: min(260px, 60vw);
-    height: auto;
-    margin-bottom: clamp(28px, 5vh, 48px);
-    animation: rise 1s ease-out both;
-  }
-  .eyebrow {
-    font-family: 'Poppins', sans-serif;
-    font-weight: 500;
-    font-size: 12px;
-    letter-spacing: 0.32em;
-    text-transform: uppercase;
-    color: var(--copper-highlight);
-    margin: 0 0 18px;
-    animation: rise 1s ease-out 0.1s both;
-  }
-
-  h1 {
-    font-family: 'DM Serif Display', serif;
-    font-style: normal;
-    font-weight: 400;
-    font-size: clamp(2.1rem, 5.2vw, 3.4rem);
-    line-height: 1.15;
-    margin: 0 0 22px;
-    color: var(--parchment);
-    animation: rise 1s ease-out 0.18s both;
-  }
-
-  h1 em {
-    font-style: italic;
-    color: var(--copper-highlight);
-  }
-
-  .sub {
-    font-size: 16px;
-    line-height: 1.7;
-    color: rgba(243,239,230,0.72);
-    max-width: 480px;
-    margin: 0 0 40px;
-    animation: rise 1s ease-out 0.26s both;
-  }
-
-  .divider {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    margin-bottom: 34px;
-    animation: rise 1s ease-out 0.32s both;
-  }
-
-  .divider .line {
-    width: 56px;
-    height: 1px;
-    background: linear-gradient(90deg, transparent, var(--copper), transparent);
-  }
-
-  .divider .diamond {
-    width: 7px;
-    height: 7px;
-    background: var(--copper);
-    transform: rotate(45deg);
-  }
-  .address-card {
-    border: 1px solid rgba(217,130,72,0.35);
-    background: rgba(217,130,72,0.06);
-    border-radius: 4px;
-    padding: 28px 36px;
-    margin-bottom: 40px;
-    animation: rise 1s ease-out 0.4s both;
-  }
-
-  .address-label {
-    font-size: 11px;
-    letter-spacing: 0.24em;
-    text-transform: uppercase;
-    color: var(--copper-highlight);
-    margin-bottom: 10px;
-  }
-
-  .address-lines {
-    font-family: 'DM Serif Display', serif;
-    font-size: clamp(1.15rem, 2.6vw, 1.5rem);
-    line-height: 1.5;
-    color: var(--parchment);
-  }
-
-  .address-lines .locale {
-    display: block;
-    font-family: 'Poppins', sans-serif;
-    font-size: 13px;
-    font-weight: 400;
-    letter-spacing: 0.04em;
-    color: rgba(243,239,230,0.6);
-    margin-top: 8px;
-  }
-
-  footer {
-    position: relative;
-    z-index: 1;
-    text-align: center;
-    padding: 26px 6vw 34px;
-    font-size: 12px;
-    letter-spacing: 0.06em;
-    color: rgba(243,239,230,0.45);
-    animation: rise 1s ease-out 0.5s both;
-  }
-
-  footer a {
-    color: var(--copper-highlight);
-    text-decoration: none;
-    border-bottom: 1px solid rgba(224,168,104,0.4);
-    transition: border-color 0.2s ease, color 0.2s ease;
-  }
-
-  footer a:hover,
-  footer a:focus-visible {
-    color: var(--parchment);
-    border-color: var(--parchment);
-  }
-
-  a:focus-visible {
-    outline: 2px solid var(--copper-highlight);
-    outline-offset: 3px;
-  }
-
-  @keyframes rise {
-    from { opacity: 0; transform: translateY(14px); }
-    to { opacity: 1; transform: translateY(0); }
-  }
-
-  @media (prefers-reduced-motion: reduce) {
-    .logo, .eyebrow, h1, .sub, .divider, .address-card, footer {
-      animation: none;
-    }
-  }
-</style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#071426">
+  <meta name="description" content="1822 Kitchen & Bar is coming soon to Memorial at Kirkwood in Houston, Texas.">
+  <title>1822 Kitchen & Bar | Memorial, Houston</title>
+  <link rel="canonical" href="https://1822kitchenandbar.com/">
+  <link rel="icon" href="assets/brand/favicon-32.png" type="image/png" sizes="32x32">
+  <link rel="icon" href="assets/brand/logo-icon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=DM+Serif+Display:ital@0;1&family=Manrope:wght@400;500;600&display=swap" rel="stylesheet">
+  <script>document.documentElement.classList.add('js')</script>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div class="stars" aria-hidden="true"></div>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="grain" aria-hidden="true"></div>
 
-  <main>
-    <img class="logo" src="1822-logo.png" alt="1822 Kitchen & Bar">
+  <header class="site-header" data-header>
+    <a class="brand" href="#top" aria-label="1822 Kitchen & Bar home">
+      <img src="1822-logo.png" alt="" width="140" height="115">
+    </a>
+    <nav class="desktop-nav" aria-label="Primary navigation">
+      <a href="#story">Our story</a>
+      <a href="#location">Location</a>
+      <a class="nav-cta" href="https://redriverrestaurants.com/" target="_blank" rel="noopener">Opening updates <span>↗</span></a>
+    </nav>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-nav" data-menu-toggle>
+      <span>Menu</span><i></i><i></i>
+    </button>
+  </header>
+  <nav class="mobile-nav" id="mobile-nav" aria-label="Mobile navigation" data-mobile-nav>
+    <a href="#story">Our story</a>
+    <a href="#location">Location</a>
+    <a href="https://redriverrestaurants.com/" target="_blank" rel="noopener">Opening updates ↗</a>
+  </nav>
 
-    <p class="eyebrow">Coming Soon</p>
+  <main id="main">
+    <section class="hero" id="top" aria-labelledby="hero-title">
+      <div class="hero-media" role="img" aria-label="1822 Kitchen and Bar is preparing to open in Memorial">
+        <div class="hero-photo" aria-hidden="true"></div>
+        <div class="hero-wash" aria-hidden="true"></div>
+        <div class="hero-lines" aria-hidden="true"></div>
+      </div>
+      <div class="hero-topline reveal">
+        <span>Memorial · Houston, Texas</span>
+        <span class="status"><i></i> Opening soon</span>
+      </div>
+      <div class="hero-copy">
+        <p class="kicker reveal">Texas roots · Memorial Drive</p>
+        <h1 id="hero-title" class="reveal">Texas roots.<br><em>A new table</em><br>on Memorial Drive.</h1>
+        <div class="hero-bottom reveal">
+          <p>1822 Kitchen &amp; Bar brings generations of family hospitality to Houston’s Memorial neighborhood—a new place to gather, opening soon at 14008 Memorial Drive.</p>
+          <a class="circle-link" href="#story" aria-label="Discover 1822"><span>Discover</span><b aria-hidden="true">↓</b></a>
+        </div>
+      </div>
+      <div class="hero-badge reveal" aria-hidden="true"><span>18</span><i>★</i><span>22</span></div>
+    </section>
 
-    <h1>A new table is<br><em>being set</em> in Houston.</h1>
-
-    <p class="sub">
-      1822 Kitchen &amp; Bar is on its way to Memorial at Kirkwood.
-      Follow along with Red River Restaurants for updates on our opening.
-    </p>
-
-    <div class="divider" aria-hidden="true">
-      <span class="line"></span>
-      <span class="diamond"></span>
-      <span class="line"></span>
-    </div>
-
-    <div class="address-card">
-      <div class="address-label">Find Us At</div>
-      <div class="address-lines">
-        14008 Memorial Dr, Suite F
-        <span class="locale">Houston, TX 77079 &middot; Memorial at Kirkwood</span>
+    <div class="ticker" aria-label="1822 Kitchen and Bar, Memorial Houston, coming soon">
+      <div class="ticker-track">
+        <span>Kitchen &amp; Bar</span><i>✦</i><span>Memorial, Houston</span><i>✦</i><span>Coming Soon</span><i>✦</i>
+        <span aria-hidden="true">Kitchen &amp; Bar</span><i aria-hidden="true">✦</i><span aria-hidden="true">Memorial, Houston</span><i aria-hidden="true">✦</i><span aria-hidden="true">Coming Soon</span><i aria-hidden="true">✦</i>
       </div>
     </div>
+
+    <section class="story section" id="story" aria-labelledby="story-title">
+      <div class="section-index reveal"><span>01</span><span>The idea</span></div>
+      <div class="story-copy">
+        <p class="eyebrow reveal">Why 1822</p>
+        <h2 id="story-title" class="reveal">A year with<br><em>meaning.</em><br>A room for now.</h2>
+        <div class="story-note reveal">
+          <p>The name reaches into the family’s Texas roots. The room looks forward: a polished neighborhood gathering place with the ease of a favorite and the energy of somewhere new.</p>
+          <p class="fineprint">More details are coming as the final pieces fall into place.</p>
+        </div>
+      </div>
+      <div class="brand-card reveal" aria-label="1822 Kitchen and Bar brand mark">
+        <span class="brand-card-label">Est. in Memorial</span>
+        <img src="1822-logo.png" alt="1822 Kitchen & Bar">
+        <span class="brand-card-rule"></span>
+        <span class="brand-card-city">Houston, Texas</span>
+      </div>
+    </section>
+
+    <section class="manifesto" aria-label="1822 brand statement">
+      <div class="manifesto-line reveal"><span>Familiar</span><i>without</i></div>
+      <div class="manifesto-line indent reveal"><span>being expected.</span></div>
+      <div class="manifesto-line reveal"><i>Polished</i><span>without</span></div>
+      <div class="manifesto-line indent reveal"><span>the pretense.</span></div>
+    </section>
+
+    <section class="location section" id="location" aria-labelledby="location-title">
+      <div class="section-index light reveal"><span>02</span><span>Find your seat</span></div>
+      <div class="location-grid">
+        <div class="location-heading">
+          <p class="eyebrow light reveal">Coming to Memorial</p>
+          <h2 id="location-title" class="reveal">Meet us<br><em>at 1822.</em></h2>
+        </div>
+        <div class="address reveal">
+          <span>14008 Memorial Drive</span><span>Suite F</span><span>Houston, Texas 77079</span>
+          <a href="https://maps.google.com/?q=14008+Memorial+Dr+Suite+F+Houston+TX+77079" target="_blank" rel="noopener">Get directions <b>↗</b></a>
+        </div>
+        <div class="location-art reveal" aria-hidden="true">
+          <span class="map-road road-one">Memorial Dr</span><span class="map-road road-two">Kirkwood Rd</span><span class="map-marker"></span><i class="route horizontal"></i><i class="route vertical"></i>
+        </div>
+      </div>
+    </section>
+
+    <section class="closing" aria-labelledby="closing-title">
+      <div class="closing-mark reveal" aria-hidden="true">★</div>
+      <p class="eyebrow reveal">The first round is getting closer</p>
+      <h2 id="closing-title" class="reveal">The table is<br><em>almost set.</em></h2>
+      <p class="closing-copy reveal">Follow Red River Restaurants for opening news and the first look inside 1822.</p>
+      <a class="button reveal" href="https://redriverrestaurants.com/" target="_blank" rel="noopener"><span>Follow the opening</span><b>↗</b></a>
+    </section>
   </main>
 
   <footer>
-    Part of the <a href="https://redriverrestaurants.com/" target="_blank" rel="noopener">Red River Restaurant Group</a>
+    <div class="footer-brand"><img src="1822-logo.png" alt="1822 Kitchen & Bar"><p>A new neighborhood original,<br>coming soon to Memorial.</p></div>
+    <div class="footer-meta">
+      <a href="https://maps.google.com/?q=14008+Memorial+Dr+Suite+F+Houston+TX+77079" target="_blank" rel="noopener">14008 Memorial Dr, Suite F<br>Houston, TX 77079</a>
+      <p>Part of the <a href="https://redriverrestaurants.com/" target="_blank" rel="noopener">Red River Restaurant Group ↗</a></p>
+    </div>
+    <p class="copyright">© <span data-year></span> 1822 Kitchen &amp; Bar</p>
   </footer>
+  <script src="script.js"></script>
 </body>
 </html>
