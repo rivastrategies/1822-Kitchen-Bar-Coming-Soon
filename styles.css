@@ -70,17 +70,14 @@ a { color: inherit; }
 }
 .brand {
   display: block;
-  width: 112px;
-  height: 82px;
-  margin-top: -12px;
-  overflow: hidden;
+  width: 126px;
+  margin-top: -6px;
   text-decoration: none;
 }
-.brand picture { display: block; }
 .brand img {
-  width: 350px;
-  max-width: none;
+  width: 100%;
   height: auto;
+  filter: drop-shadow(0 7px 10px rgba(13, 27, 61, .14));
 }
 .coordinates, .opening {
   margin: 0;
@@ -257,8 +254,7 @@ h1 strong {
   .stage { min-height: calc(100svh - 16px); clip-path: polygon(0 0, calc(100% - 38px) 0, 100% 38px, 100% 100%, 38px 100%, 0 calc(100% - 38px)); }
   .stage::before { background: linear-gradient(var(--copper), var(--copper)) 0 0 / calc(100% - 38px) 1px no-repeat, linear-gradient(45deg, transparent 48.4%, var(--copper) 49%, var(--copper) 51%, transparent 51.6%) 100% 0 / 38px 38px no-repeat, linear-gradient(var(--copper), var(--copper)) 100% 38px / 1px calc(100% - 38px) no-repeat, linear-gradient(var(--copper), var(--copper)) 38px 100% / calc(100% - 38px) 1px no-repeat, linear-gradient(45deg, transparent 48.4%, var(--copper) 49%, var(--copper) 51%, transparent 51.6%) 0 100% / 38px 38px no-repeat, linear-gradient(var(--copper), var(--copper)) 0 0 / 1px calc(100% - 38px) no-repeat; }
   .masthead { grid-template-columns: 1fr auto; padding: 12px 20px 0; }
-  .brand { width: 116px; height: 59px; margin-top: -5px; }
-  .brand img { width: 154px; }
+  .brand { width: 92px; margin-top: -3px; }
   .coordinates { display: none; }
   .hero { grid-template-columns: 1fr; gap: 32px; padding: 24px 20px 34px; }
   .hero-copy { padding-top: 0; }
