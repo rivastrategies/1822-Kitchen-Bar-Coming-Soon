@@ -1,14 +1,6 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-J75HW6R0W7"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-J75HW6R0W7');
-  </script>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#f3efe6">
@@ -16,22 +8,36 @@
   <meta name="robots" content="index, follow, max-image-preview:large">
   <title>1822 Kitchen & Bar | Coming to Wilchester</title>
   <link rel="canonical" href="https://1822kitchenandbar.com/">
-  <link rel="icon" href="assets/brand/favicon-drive-01.png" type="image/png">
+  <link rel="icon" href="/favicon.ico" sizes="16x16 32x32 48x48" type="image/x-icon">
+  <link rel="icon" href="/assets/brand/favicon-16-v1.png" sizes="16x16" type="image/png">
+  <link rel="icon" href="/assets/brand/favicon-32-v1.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="/assets/brand/favicon-48-v1.png" sizes="48x48" type="image/png">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180">
+  <link rel="manifest" href="/site.webmanifest">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="1822 Kitchen & Bar">
   <meta property="og:title" content="1822 Kitchen & Bar | Coming to Wilchester">
   <meta property="og:description" content="Texas roots. A new table on Memorial Drive, coming soon to Wilchester in Houston.">
   <meta property="og:url" content="https://1822kitchenandbar.com/">
-  <meta property="og:image" content="https://1822kitchenandbar.com/hostess-stand.jpg">
-  <meta property="og:image:alt" content="The 1822 Kitchen & Bar host stand in Wilchester, Houston">
+  <meta property="og:image" content="https://1822kitchenandbar.com/assets/brand/1822-share-v1.png">
+  <meta property="og:image:secure_url" content="https://1822kitchenandbar.com/assets/brand/1822-share-v1.png">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="1822 Kitchen & Bar's approved badge on a navy background">
+  <meta property="og:locale" content="en_US">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="1822 Kitchen & Bar | Coming to Wilchester">
   <meta name="twitter:description" content="Texas roots. A new table on Memorial Drive, coming soon to Wilchester in Houston.">
-  <meta name="twitter:image" content="https://1822kitchenandbar.com/hostess-stand.jpg">
+  <meta name="twitter:image" content="https://1822kitchenandbar.com/assets/brand/1822-share-v1.png">
+  <meta name="twitter:image:alt" content="1822 Kitchen & Bar's approved badge on a navy background">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Manrope:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="site-updates.css">
+  <script defer src="site-config.js"></script>
+  <script defer src="site.js"></script>
   <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -61,18 +67,17 @@
 <body>
   <a class="skip" href="#main">Skip to content</a>
 
-  <main class="stage" id="main">
+  <main class="stage long-page" id="main">
     <header class="masthead">
       <a class="brand" href="#main" aria-label="1822 Kitchen & Bar home">
-        <img src="assets/brand/primary-badge-web.png" alt="1822 Kitchen & Bar" width="1600" height="960">
+        <img src="assets/brand/header-badge-v1.webp" alt="1822 Kitchen & Bar" width="400" height="240">
       </a>
-      <p class="coordinates">Wilchester · Memorial<br>Houston, Texas</p>
-      <p class="opening"><span></span> Coming soon</p>
+      <nav class="site-nav" aria-label="Main navigation"><a href="#story">Our story</a><a href="careers/">Careers</a></nav>
     </header>
 
     <section class="hero" aria-labelledby="headline">
       <div class="hero-copy">
-        <p class="edition">Wilchester · Memorial · Houston, Texas</p>
+        <p class="edition">Coming soon · Wilchester · Houston, Texas</p>
         <h1 id="headline"><span>Texas roots.</span><strong>A new table on<br>Memorial Drive.</strong></h1>
         <p class="intro">Generations of family hospitality, taking a new place in Wilchester—at the heart of Houston’s Memorial area.</p>
       </div>
@@ -85,7 +90,17 @@
       </div>
     </section>
 
-    <footer class="information">
+    <section class="story" id="story" aria-labelledby="story-heading">
+      <p class="section-label">The story behind our name</p>
+      <div class="story-heading">
+        <h2 class="editorial-heading" id="story-heading">A year. A family.<br><em>A story to share.</em></h2>
+        <div class="body-copy"><p>1822 marks the year Jared Ellison Groce and his family arrived in Texas as part of Stephen F. Austin’s Old Three Hundred.</p><p>For owners Kevin and Ric Kiersh, that history is personal: Groce was their fourth great-grandfather. The name 1822 honors that family connection and their Texas roots.</p></div>
+      </div>
+      <figure class="mural"><img src="assets/photos/mural-1600.jpg" srcset="assets/photos/mural-800.jpg 800w, assets/photos/mural-1600.jpg 1600w" sizes="(max-width: 600px) calc(100vw - 64px), 88vw" alt="The 1822 family-history mural on a stone wall, showing a Texas map and the name Jared Ellison Groce" width="1600" height="1200" loading="lazy" decoding="async"><figcaption><span>A piece of the family story, now on our walls.</span><span>Inside 1822 Kitchen &amp; Bar · Memorial &amp; Kirkwood</span></figcaption></figure>
+      <div class="story-closing"><h3>Rooted in family.<br>Looking forward to the next story.</h3><div class="body-copy"><p>Generations later, that connection continues through the Kiersh family and Red River Restaurants. Here on Memorial Drive, 1822 is the next chapter.</p><p>We look forward to the stories that will unfold around these tables: dinners with family, catching up with neighbors and meeting friends for a drink.</p><p>As the restaurant comes together, we’ll share more from inside. An opening date will be announced once confirmed.</p></div></div>
+    </section>
+    <section class="careers-strip" aria-labelledby="team-heading"><div><h2 id="team-heading">Be part of the next chapter.</h2><p>Explore front-of-house and kitchen opportunities at 1822, and tell us about your experience and availability.</p></div><a class="button" href="careers/">Explore careers <span aria-hidden="true">↗</span></a></section>
+    <footer class="information" style="margin-top:40px">
       <div><span>Address</span><strong>14008 Memorial Drive<br>Suite F</strong></div>
       <div><span>Neighborhood</span><strong>Wilchester /<br>Memorial</strong></div>
       <div><span>Family</span><strong>Red River<br>Restaurants</strong></div>
@@ -95,8 +110,7 @@
     </footer>
   </main>
 
-  <p class="credit">1822 Kitchen &amp; Bar · Wilchester · Houston</p>
-  <p class="policy"><a href="https://redriverrestaurants.com/privacy-policy/">Privacy Policy</a></p>
+<footer class="site-footer" style="color:var(--paper)"><div class="footer-bottom"><p>1822 Kitchen &amp; Bar · Wilchester · Houston</p><a href="https://redriverrestaurants.com/privacy-policy/">Privacy Policy</a><a href="https://rivastrategies.com/">Built by Riva</a></div></footer>
   <script src="script.js"></script>
   <script defer src="analytics-events.js"></script>
 </body>

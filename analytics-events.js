@@ -4,6 +4,7 @@
   if (window.rrAnalytics) return;
 
   function trackEvent(name, params) {
+    if (window.is1822Live !== true) return;
     var clean = {
       brand: '1822_kitchen_bar',
       location_id: '1822_memorial'
